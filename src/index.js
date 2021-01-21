@@ -2,10 +2,10 @@
 // You should implement your task here.
 //start task
 module.exports = function towelSort (matrix) {
-  if(!matrix) {
-    return [];
-  }
   let arr = [];
+
+  if(!matrix) return [];
+
   matrix.forEach((elem, i) => {
     if(i % 2 !== 0) {
       elem.reverse();
@@ -14,5 +14,6 @@ module.exports = function towelSort (matrix) {
       arr.push(elem);
     });
   });
+  
   return arr;
 };
